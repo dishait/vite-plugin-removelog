@@ -1,90 +1,80 @@
 # vite-plugin-removelog
 
-生产环境下移除 console 的 vite 插件
-
-<br />
-
-## Features 🦖
-
-- pnpm 的
-- `vitest` 测试
-- 开箱即用的
-- `typescript` 的
+生产环境下移除 `console` 的 `vite` 插件
 
 <br />
 <br />
 
-## Usage 🦕
+## 动机 🦒
 
+不希望开发时的日志在生产环境下被人看到
 
-### install
+<br />
+<br />
+<br />
 
-```shell
-# 工作区安装
-pnpm i
+## 特性 🦖
 
-# 源码依赖安装
-pnpm i -w
-```
+- 支持 `.js`，`.ts`，`.jsx`，`.tsx`，`.vue`
 
-### init:info
+<br />
+<br />
+<br />
 
-```shell
-pnpm init:info
-```
+## 使用 🦕
 
-### test
-
-```shell
-pnpm test
-
-# or pnpm test:watch
-```
-
-### build
+### 安装
 
 ```shell
-pnpm build
+npm i vite-plugin-removelog -D
 ```
 
-### coverage
+<br />
+<br />
 
-```shell
-pnpm coverage
+### 配置
+
+```js
+// vite.config.js
+import Removelog from 'vite-plugin-removelog'
+
+export default defineConfig({
+	plugins: [Removelog()]
+})
 ```
 
-### dev
+<br />
 
-```shell
-pnpm dev
+#### 包含
+
+```js
+// vite.config.js
+import Removelog from 'vite-plugin-removelog'
+
+export default defineConfig({
+	plugins: [
+		Removelog({
+			// 默认包含 log，warn，error
+			include: ['log', 'warn']
+		})
+	]
+})
 ```
 
-### publish
+<br />
+<br />
+<br />
 
-```shell
-npm publish
-```
+## 组织 🦔
 
-### play
+欢迎关注 **帝莎编程**
 
-```shell
-# 工作区 dev
-pnpm play
+- [官网](http://dishaxy.dishait.cn/)
+- [Gitee](https://gitee.com/dishait)
+- [Github](https://github.com/dishait)
+- [网易云课堂](https://study.163.com/provider/480000001892585/index.htm?share=2&shareId=480000001892585)
 
-# or pnpm play:open
-# or pnpm play:host
-# or pnpm play:build
-# or pnpm play:preview
-# or pnpm play:preview:open
-# or pnpm play:preview:host
-```
-
-### release
-
-```shell
-pnpm release
-```
-
+<br />
 <br />
 <br />
 
