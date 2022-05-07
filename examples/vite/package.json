@@ -16,7 +16,7 @@
     "@vitejs/plugin-vue": "^2.3.1",
     "vite": "^2.9.5",
     "vite-plugin-inspect": "^0.3.15",
-    "vite-plugin-name": "workspace:*",
-    "vue": "^3.2.33"
+    "vue": "^3.2.33",
+    "vite-plugin-removelog": "workspace:*"
   }
 }
