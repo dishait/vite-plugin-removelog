@@ -24,10 +24,10 @@
 	"scripts": {
 		"build": "tsup",
 		"test": "vitest",
-		"test:update": "vitest -u",
+		"dev": "tsup --watch",
 		"test:ui": "vitest --ui",
+		"test:update": "vitest -u",
 		"coverage": "vitest --coverage",
-		"dev": "pnpm run build -- --watch",
 		"init:info": "plop --plopfile scripts/init.js",
 		"release": "npm run build && bumpp --commit --push --tag && npm publish",
 		"play": "pnpm -C examples/vite run dev",

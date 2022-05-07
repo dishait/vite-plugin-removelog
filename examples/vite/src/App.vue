@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-console.log('你好')
+import { Hello } from './Hello'
+console.log('Vue')
 </script>
 
-<template> Hello, world!! </template>
-
-<style></style>
+<template> <Hello /> </template>

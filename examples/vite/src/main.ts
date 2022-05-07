@@ -3,6 +3,6 @@ import App from './App.vue'
 
 const app = createApp(App)
 
-console.log('1000')
+console.log('Ts')
 
 app.mount('#app')
