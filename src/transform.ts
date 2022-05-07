@@ -1,6 +1,6 @@
 import $ from 'gogocode'
 
-type Include = 'all' | (keyof typeof console)[]
+export type Include = 'all' | (keyof typeof console)[]
 
 /**
  * transform code
