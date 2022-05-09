@@ -1,5 +1,5 @@
 {
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "vite-plugin-removelog",
 	"description": "生产环境下移除 console 的 vite 插件",
 	"main": "./dist/index.js",
