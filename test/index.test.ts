@@ -42,6 +42,14 @@ describe('remove log', () => {
 		).toMatchInlineSnapshot('""')
 	})
 
+	it('ignore string', () => {
+		expect(
+			transform(
+				`console.log('foo'); "console.warn('wohao')"`
+			)
+		).toMatchInlineSnapshot('"\\"console.warn(\'wohao\')\\""')
+	})
+
 	it('typecheck', () => {
 		expect(() =>
 			transform(
