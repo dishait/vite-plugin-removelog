@@ -1,23 +1,24 @@
 {
-  "name": "vite-example",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "dev:open": "vite --open",
-    "dev:host": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview",
-    "preview:open": "vite preview --open",
-    "preview:host": "vite preview --host"
-  },
-  "author": "markthree",
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
-    "@vitejs/plugin-vue-jsx": "^1.3.10",
-    "vite": "^2.9.5",
-    "vite-plugin-inspect": "^0.3.15",
-    "vite-plugin-removelog": "workspace:*",
-    "vue": "^3.2.33"
-  }
+	"name": "vite-example",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vite",
+		"dev:open": "vite --open",
+		"dev:host": "vite --host",
+		"build": "vite build",
+		"preview": "vite preview",
+		"preview:open": "vite preview --open",
+		"preview:host": "vite preview --host"
+	},
+	"author": "markthree",
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^2.3.1",
+		"@vitejs/plugin-vue-jsx": "^1.3.10",
+		"vite": "^2.9.5",
+		"vite-plugin-compression": "^0.5.1",
+		"vite-plugin-inspect": "^0.3.15",
+		"vite-plugin-removelog": "workspace:*",
+		"vue": "^3.2.33"
+	}
 }
