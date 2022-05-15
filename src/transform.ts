@@ -26,7 +26,7 @@ export const transform = (
 	}
 
 	return (
-		$(code)
+		$(code, { parseOptions: { sourceType: 'module' } })
 			// @ts-ignore
 			.find(selectors)
 			.remove()
