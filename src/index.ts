@@ -16,7 +16,10 @@ const usePlugin = (options?: Partial<Options>): Plugin => {
 		enforce: 'post',
 		name: useName('removelog'),
 		transform(code, id) {
-			if (/(\.vue|\.[jt]sx?)$/.test(id)) {
+			if (
+				/(\.vue|\.[jt]sx?)$/.test(id) &&
+				!/node_modules/.test(id)
+			) {
 				return transform(code, include)
 			}
 		}
