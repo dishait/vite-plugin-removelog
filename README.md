@@ -62,6 +62,30 @@ export default defineConfig({
 ```
 
 <br />
+
+#### 规范
+
+可以通过 `normalize` 来自定义哪些模块需要被作用
+
+```js
+// vite.config.js
+import Removelog from 'vite-plugin-removelog'
+
+export default defineConfig({
+	plugins: [
+		Removelog({
+			// 默认为 /(\.vue|\.[jt]sx?)$/.test(id)
+			// 返回 Truthy 时，模块被将作用
+			normalize(id) {
+				return /(\.vue|\.[jt]sx?)$/.test(id)
+			}
+		})
+	]
+})
+```
+
+
+<br />
 <br />
 <br />
 

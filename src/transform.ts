@@ -8,10 +8,10 @@ export type Include = 'all' | (keyof typeof console)[]
  * @param include scope to be removed
  * @returns the code of transformed
  */
-export const transform = (
+export function transform(
 	code: string,
 	include: Include = ['log', 'warn', 'error']
-) => {
+) {
 	let selectors
 	if (include === 'all') {
 		selectors = `console.$_$()`
