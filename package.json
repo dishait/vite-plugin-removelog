@@ -28,7 +28,6 @@
 		"test:ui": "vitest --ui",
 		"test:update": "vitest -u",
 		"coverage": "vitest --coverage",
-		"init:info": "plop --plopfile scripts/init.js",
 		"release": "npm run build && bumpp --commit --push --tag && npm publish",
 		"play": "pnpm -C examples/vite run dev",
 		"play:open": "pnpm -C examples/vite run dev:open",
@@ -58,14 +57,13 @@
 		"@vitest/ui": "^0.25.5",
 		"bumpp": "^8.2.1",
 		"c8": "^7.12.0",
-		"esno": "^0.16.3",
-		"plop": "^3.1.1",
 		"tsup": "^6.5.0",
 		"typescript": "^4.9.4",
 		"vite": "^3.2.5",
 		"vitest": "^0.25.5"
 	},
 	"dependencies": {
-		"gogocode": "^1.0.55"
+		"gogocode": "^1.0.55",
+		"m-type-tools": "^0.2.0"
 	}
 }

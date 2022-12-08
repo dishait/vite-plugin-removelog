@@ -5,10 +5,5 @@ import Inspect from 'vite-plugin-inspect'
 import Removelog from 'vite-plugin-removelog'
 
 export default defineConfig({
-	plugins: [
-		Vue(),
-		Jsx(),
-		Inspect(),
-		Removelog()
-	]
+	plugins: [Vue(), Jsx(), Inspect(), Removelog()]
 })

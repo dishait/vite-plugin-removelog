@@ -5,4 +5,6 @@ const app = createApp(App)
 
 console.log('Ts')
 
+console.warn('TsxWarn')
+
 app.mount('#app')
