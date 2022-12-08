@@ -69,3 +69,5 @@ export default function (
 		...plugin
 	}
 }
+
+export { transform as gogocodeRemovelog } from './transform'
