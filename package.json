@@ -54,18 +54,18 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "^17.0.31",
-		"bumpp": "^7.1.1",
-		"c8": "^7.11.2",
-		"esno": "^0.14.1",
-		"plop": "^3.1.0",
-		"tsup": "^5.12.7",
-		"typescript": "^4.6.4",
-		"vite": "^2.9.8",
-		"vitest": "^0.10.5",
-		"@vitest/ui": "^0.10.5"
+		"@types/node": "^18.11.11",
+		"@vitest/ui": "^0.25.5",
+		"bumpp": "^8.2.1",
+		"c8": "^7.12.0",
+		"esno": "^0.16.3",
+		"plop": "^3.1.1",
+		"tsup": "^6.5.0",
+		"typescript": "^4.9.4",
+		"vite": "^3.2.5",
+		"vitest": "^0.25.5"
 	},
 	"dependencies": {
-		"gogocode": "^1.0.53"
+		"gogocode": "^1.0.55"
 	}
 }
