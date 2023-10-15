@@ -1,10 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
-const app = createApp(App)
+const app = createApp(App);
 
-console.log('Ts')
+console.log("Ts");
 
-console.warn('TsxWarn')
+console.warn("TsxWarn");
 
-app.mount('#app')
+app.mount("#app");

@@ -1,64 +1,64 @@
-import { transform } from '../src/transform'
-import { describe, expect, it } from 'vitest'
+import { transform } from "../src/transform";
+import { describe, expect, it } from "vitest";
 
-describe('remove log', () => {
-	it('basic', () => {
-		expect(
-			transform(`console.log("foo")`)
-		).toMatchInlineSnapshot('""')
-	})
+describe("remove log", () => {
+  it("basic", () => {
+    expect(
+      transform(`console.log("foo")`),
+    ).toMatchInlineSnapshot('""');
+  });
 
-	it('multi parameter', () => {
-		expect(
-			transform(`console.log("foo", "bar", "jack");`)
-		).toMatchInlineSnapshot('""')
-	})
+  it("multi parameter", () => {
+    expect(
+      transform(`console.log("foo", "bar", "jack");`),
+    ).toMatchInlineSnapshot('""');
+  });
 
-	it('other types', () => {
-		expect(
-			transform(`console.warn("foo"); console.error("bar")`)
-		).toMatchInlineSnapshot('""')
-	})
+  it("other types", () => {
+    expect(
+      transform(`console.warn("foo"); console.error("bar")`),
+    ).toMatchInlineSnapshot('""');
+  });
 
-	it('other types', () => {
-		expect(
-			transform(`console.warn("foo"); console.error("bar")`)
-		).toMatchInlineSnapshot('""')
-	})
+  it("other types", () => {
+    expect(
+      transform(`console.warn("foo"); console.error("bar")`),
+    ).toMatchInlineSnapshot('""');
+  });
 
-	it('include', () => {
-		expect(
-			transform(
-				`console.log('log'); console.warn("warn"); console.error("error")`,
-				['log', 'error']
-			)
-		).toMatchInlineSnapshot('"console.warn(\\"warn\\");"')
+  it("include", () => {
+    expect(
+      transform(
+        `console.log('log'); console.warn("warn"); console.error("error")`,
+        ["log", "error"],
+      ),
+    ).toMatchInlineSnapshot('"console.warn(\\"warn\\");"');
 
-		expect(
-			transform(
-				`console.clear();console.error("bar")`,
-				'all'
-			)
-		).toMatchInlineSnapshot('""')
-	})
+    expect(
+      transform(
+        `console.clear();console.error("bar")`,
+        "all",
+      ),
+    ).toMatchInlineSnapshot('""');
+  });
 
-	it('ignore string', () => {
-		expect(
-			transform(
-				`console.log('foo'); "console.warn('wohao')"`
-			)
-		).toMatchInlineSnapshot('"\\"console.warn(\'wohao\')\\""')
-	})
+  it("ignore string", () => {
+    expect(
+      transform(
+        `console.log('foo'); "console.warn('wohao')"`,
+      ),
+    ).toMatchInlineSnapshot('"\\"console.warn(\'wohao\')\\""');
+  });
 
-	it('typecheck', () => {
-		expect(() =>
-			transform(
-				`console.clear();`,
-				// @ts-ignore
-				false
-			)
-		).toThrow(
-			`transform's include should be string or string[]`
-		)
-	})
-})
+  it("typecheck", () => {
+    expect(() =>
+      transform(
+        `console.clear();`,
+        // @ts-ignore
+        false,
+      )
+    ).toThrow(
+      `transform's include should be string or string[]`,
+    );
+  });
+});

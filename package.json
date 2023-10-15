@@ -1,69 +1,69 @@
 {
-	"version": "0.2.1",
-	"name": "vite-plugin-removelog",
-	"description": "生产环境下移除 console 的 vite 插件",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dishait/vite-plugin-removelog.git"
-	},
-	"exports": {
-		"./*": "./*",
-		".": {
-			"require": "./dist/index.js",
-			"import": "./dist/index.mjs",
-			"types": "./dist/index.d.ts"
-		}
-	},
-	"files": [
-		"dist",
-		"client.d.ts"
-	],
-	"scripts": {
-		"build": "tsup",
-		"test": "vitest",
-		"dev": "tsup --watch",
-		"test:ui": "vitest --ui",
-		"test:update": "vitest -u",
-		"coverage": "vitest --coverage",
-		"release": "npm run build && bumpp --commit --push --tag && npm publish",
-		"play": "pnpm -C examples/vite run dev",
-		"play:open": "pnpm -C examples/vite run dev:open",
-		"play:host": "pnpm -C examples/vite run dev:host",
-		"play:build": "pnpm -C examples/vite run build",
-		"play:preview": "pnpm -C examples/vite run preview",
-		"play:preview:open": "pnpm -C examples/vite run preview:open",
-		"play:preview:host": "pnpm -C examples/vite run preview:host"
-	},
-	"keywords": [
-		"vite",
-		"plugin",
-		"template"
-	],
-	"author": {
-		"email": "1801982702@qq.com",
-		"name": "markthree",
-		"url": "https://github.com/markthree"
-	},
-	"bugs": {
-		"email": "1801982702@qq.com",
-		"url": "https://github.com/dishait/vite-plugin-removelog/issues"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"@types/node": "^20.8.6",
-		"@vitest/ui": "^0.34.6",
-		"bumpp": "^9.2.0",
-		"c8": "^8.0.1",
-		"tsup": "^7.2.0",
-		"typescript": "^5.2.2",
-		"vite": "^4.4.11",
-		"vitest": "^0.34.6"
-	},
-	"dependencies": {
-		"gogocode": "^1.0.55",
-		"m-type-tools": "^0.4.1"
-	}
+  "version": "0.2.1",
+  "name": "vite-plugin-removelog",
+  "description": "生产环境下移除 console 的 vite 插件",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dishait/vite-plugin-removelog.git"
+  },
+  "exports": {
+    "./*": "./*",
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "client.d.ts"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest",
+    "dev": "tsup --watch",
+    "test:ui": "vitest --ui",
+    "test:update": "vitest -u",
+    "coverage": "vitest --coverage",
+    "release": "npm run build && bumpp --commit --push --tag && npm publish",
+    "play": "pnpm -C examples/vite run dev",
+    "play:open": "pnpm -C examples/vite run dev:open",
+    "play:host": "pnpm -C examples/vite run dev:host",
+    "play:build": "pnpm -C examples/vite run build",
+    "play:preview": "pnpm -C examples/vite run preview",
+    "play:preview:open": "pnpm -C examples/vite run preview:open",
+    "play:preview:host": "pnpm -C examples/vite run preview:host"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "template"
+  ],
+  "author": {
+    "email": "1801982702@qq.com",
+    "name": "markthree",
+    "url": "https://github.com/markthree"
+  },
+  "bugs": {
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/dishait/vite-plugin-removelog/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.6",
+    "@vitest/ui": "^0.34.6",
+    "bumpp": "^9.2.0",
+    "c8": "^8.0.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "gogocode": "^1.0.55",
+    "m-type-tools": "^0.4.1"
+  }
 }

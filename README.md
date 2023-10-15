@@ -36,11 +36,11 @@ npm i vite-plugin-removelog -D
 
 ```js
 // vite.config.js
-import Removelog from 'vite-plugin-removelog'
+import Removelog from "vite-plugin-removelog";
 
 export default defineConfig({
-	plugins: [Removelog()]
-})
+  plugins: [Removelog()],
+});
 ```
 
 <br />
@@ -49,16 +49,16 @@ export default defineConfig({
 
 ```js
 // vite.config.js
-import Removelog from 'vite-plugin-removelog'
+import Removelog from "vite-plugin-removelog";
 
 export default defineConfig({
-	plugins: [
-		Removelog({
-			// 默认包含 log，warn，error
-			include: ['log', 'warn']
-		})
-	]
-})
+  plugins: [
+    Removelog({
+      // 默认包含 log，warn，error
+      include: ["log", "warn"],
+    }),
+  ],
+});
 ```
 
 <br />
@@ -69,18 +69,18 @@ export default defineConfig({
 
 ```js
 // vite.config.js
-import Removelog from 'vite-plugin-removelog'
+import Removelog from "vite-plugin-removelog";
 
 export default defineConfig({
-	plugins: [
-		Removelog({
-			// 返回 Truthy 时，模块被将作用
-			normalize(id) {
-				return /(\.vue|\.[jt]sx?)$/.test(id)
-			}
-		})
-	]
-})
+  plugins: [
+    Removelog({
+      // 返回 Truthy 时，模块被将作用
+      normalize(id) {
+        return /(\.vue|\.[jt]sx?)$/.test(id);
+      },
+    }),
+  ],
+});
 ```
 
 <br />
@@ -91,16 +91,16 @@ export default defineConfig({
 
 ```js
 // vite.config.js
-import Removelog from 'vite-plugin-removelog'
+import Removelog from "vite-plugin-removelog";
 
 export default defineConfig({
-	plugins: [
-		Removelog({
-			// 默认为 true
-			ignoreNodeModules: true
-		})
-	]
-})
+  plugins: [
+    Removelog({
+      // 默认为 true
+      ignoreNodeModules: true,
+    }),
+  ],
+});
 ```
 
 <br />
@@ -108,20 +108,22 @@ export default defineConfig({
 
 ## 原理
 
-该插件不传入 `normalize` 时由 [vite](https://cn.vitejs.dev/) 内置的 [esbuild](https://esbuild.github.io/) 进行转换，当传入 `normalize` 时，则为 [gogocode](https://github.com/thx/gogocode/issues) 进行转换。
+该插件不传入 `normalize` 时由 [vite](https://cn.vitejs.dev/) 内置的
+[esbuild](https://esbuild.github.io/) 进行转换，当传入 `normalize` 时，则为
+[gogocode](https://github.com/thx/gogocode/issues) 进行转换。
 
 [gogocode](https://github.com/thx/gogocode/issues) 实现的转换也是导出的 👇
 
 ```js
-import { gogocodeRemovelog } from 'vite-plugin-removelog'
+import { gogocodeRemovelog } from "vite-plugin-removelog";
 
 const code = `
 const foo = 1
 console.log("foo")
-`
-const dest = gogocodeRemovelog(code)
+`;
+const dest = gogocodeRemovelog(code);
 
-console.log(dest) // const foo = 1
+console.log(dest); // const foo = 1
 ```
 
 <br />
